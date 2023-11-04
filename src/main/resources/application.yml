@@ -20,6 +20,7 @@ spring:
           max-idle-time: 15s
           max-life-time: 60s
       default-filters:
+        - SaveSession
         - name: RequestRateLimiter
           args:
             redis-rate-limiter:
@@ -61,6 +62,11 @@ spring:
       port: 6379
       connect-timeout: 2s
       timeout: 1s
+  session:
+    store-type: redis
+    timeout: 10m
+    redis:
+      namespace: polar:edge
 
 resilience4j:
   circuitbreaker:
