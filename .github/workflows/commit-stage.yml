@@ -3,7 +3,7 @@ on: push
 
 env:
   REGISTRY: ghcr.io
-  IMAGE_NAME: kartikdhiman/order-service
+  IMAGE_NAME: kartikdhiman/edge-service
   VERSION: latest
 
 jobs:
